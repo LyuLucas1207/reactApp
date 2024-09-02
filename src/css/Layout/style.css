@@ -1,0 +1,125 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* 防止水平溢出 */
+}
+
+/* 布局容器 */
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* 防止水平溢出 */
+}
+
+/* 头部样式 */
+.layout-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo .logo-link {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.logo .logo-link:hover {
+    color: #0056b3;
+}
+
+/* 导航栏样式 */
+.navigation .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation .nav-item .nav-link {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation .nav-item .nav-link:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* 主内容区域 */
+.layout-main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    /* 防止内容溢出 */
+}
+
+/* 页脚样式 */
+.layout-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: hidden;
+    /* 防止内容溢出 */
+}
+
+.layout-footer p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .layout-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navigation .nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navigation .nav-item .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .layout-main {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+}
