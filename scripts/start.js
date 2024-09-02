@@ -42,10 +42,10 @@ const isInteractive = process.stdout.isTTY;
 // if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 //   process.exit(1);
 // }
-if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs, paths.blogHtml, paths.blogIndexJs])) {
+if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs, paths.blogHtml, paths.blogIndexJs, paths.phoneHtml, paths.phoneIndexJs])) {
   process.exit(1);
 }
-//====================================================================================================
+//!====================================================================================================
 
 // Tools like Cloud9 rely on this.
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;

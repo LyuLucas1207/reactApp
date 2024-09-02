@@ -62,7 +62,10 @@ module.exports = {
   // Add build paths for blog
   blogHtml: resolveApp('public/blog.html'),
   blogIndexJs: resolveModule(resolveApp, 'src/blog'),
-  // ========================================================
+
+  phoneHtml: resolveApp('public/phone.html'),
+  phoneIndexJs: resolveModule(resolveApp, 'src/phone'),
+  //!===============================================================
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),

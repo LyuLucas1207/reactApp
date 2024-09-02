@@ -43,10 +43,10 @@ const isInteractive = process.stdout.isTTY;
 //   process.exit(1);
 // }
 
-if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs, paths.blogHtml, paths.blogIndexJs])) {
+if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs, paths.blogHtml, paths.blogIndexJs, paths.phoneHtml, paths.phoneIndexJs])) {
   process.exit(1);
 }
-//====================================================================================================
+//!====================================================================================================
 
 const argv = process.argv.slice(2);
 const writeStatsJson = argv.indexOf('--stats') !== -1;

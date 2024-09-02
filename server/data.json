@@ -1,0 +1,144 @@
+{
+    "ka": [
+        {
+            "type": "pay",
+            "money": -999,
+            "date": "2021-01-01 00:00:00",
+            "useFor": "drink",
+            "id": 1
+        },
+        {
+            "type": "income",
+            "money": 500,
+            "date": "2021-01-02 12:30:00",
+            "useFor": "salary",
+            "id": 2
+        },
+        {
+            "type": "pay",
+            "money": -150,
+            "date": "2021-01-03 08:45:00",
+            "useFor": "food",
+            "id": 3
+        },
+        {
+            "type": "income",
+            "money": 200,
+            "date": "2021-01-04 14:20:00",
+            "useFor": "freelance",
+            "id": 4
+        },
+        {
+            "type": "pay",
+            "money": -300,
+            "date": "2021-01-05 18:00:00",
+            "useFor": "rent",
+            "id": 5
+        },
+        {
+            "type": "income",
+            "money": 100,
+            "date": "2021-01-06 09:15:00",
+            "useFor": "gift",
+            "id": 6
+        },
+        {
+            "type": "pay",
+            "money": -50,
+            "date": "2021-01-07 11:30:00",
+            "useFor": "transport",
+            "id": 7
+        },
+        {
+            "type": "income",
+            "money": 300,
+            "date": "2021-01-08 16:45:00",
+            "useFor": "bonus",
+            "id": 8
+        },
+        {
+            "type": "pay",
+            "money": -200,
+            "date": "2021-01-09 13:00:00",
+            "useFor": "shopping",
+            "id": 9
+        },
+        {
+            "type": "income",
+            "money": 400,
+            "date": "2021-01-10 10:30:00",
+            "useFor": "investment",
+            "id": 10
+        },
+        {
+            "type": "pay",
+            "money": -100,
+            "date": "2021-01-11 15:00:00",
+            "useFor": "entertainment",
+            "id": 11
+        },
+        {
+            "type": "income",
+            "money": 250,
+            "date": "2021-01-12 17:45:00",
+            "useFor": "side job",
+            "id": 12
+        },
+        {
+            "type": "pay",
+            "money": -75,
+            "date": "2021-01-13 19:30:00",
+            "useFor": "utilities",
+            "id": 13
+        },
+        {
+            "type": "income",
+            "money": 150,
+            "date": "2021-01-14 08:00:00",
+            "useFor": "refund",
+            "id": 14
+        },
+        {
+            "type": "pay",
+            "money": -125,
+            "date": "2021-01-15 12:00:00",
+            "useFor": "medical",
+            "id": 15
+        },
+        {
+            "type": "income",
+            "money": 350,
+            "date": "2021-01-16 14:30:00",
+            "useFor": "lottery",
+            "id": 16
+        },
+        {
+            "type": "pay",
+            "money": -175,
+            "date": "2021-01-17 16:00:00",
+            "useFor": "education",
+            "id": 17
+        },
+        {
+            "type": "income",
+            "money": 450,
+            "date": "2021-01-18 18:30:00",
+            "useFor": "dividends",
+            "id": 18
+        },
+        {
+            "type": "pay",
+            "money": -225,
+            "date": "2021-01-19 20:00:00",
+            "useFor": "travel",
+            "id": 19
+        },
+        {
+            "type": "income",
+            "money": 500,
+            "date": "2021-01-20 22:00:00",
+            "useFor": "inheritance",
+            "id": 20
+        }
+    ]
+}

@@ -88,7 +88,7 @@ const hasJsxRuntime = (() => {
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 const webpackDevClientEntry = require.resolve('react-dev-utils/webpackHotDevClient');
-// =========================================================================================================
+//!=========================================================================================================
 
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
@@ -209,11 +209,12 @@ module.exports = function (webpackEnv) {
 
     //Original
     // entry: paths.appIndexJs,
-    //=========================================================================================================
+    //!=========================================================================================================
     
     entry: {
       home: isEnvDevelopment && !shouldUseReactRefresh ? [ webpackDevClientEntry, paths.appIndexJs, ] : paths.appIndexJs,
-      blog: isEnvDevelopment && !shouldUseReactRefresh ? [ webpackDevClientEntry, paths.blogIndexJs ] : paths.blogIndexJs,
+      blog: isEnvDevelopment && !shouldUseReactRefresh ? [webpackDevClientEntry, paths.blogIndexJs] : paths.blogIndexJs,
+      phone: isEnvDevelopment && !shouldUseReactRefresh ? [webpackDevClientEntry, paths.phoneIndexJs] : paths.phoneIndexJs,
     },
 
     
@@ -231,11 +232,11 @@ module.exports = function (webpackEnv) {
       filename: isEnvProduction
         ? 'static/js/[name].[contenthash:8].js'
         : isEnvDevelopment && 'static/js/[name].bundle.js',
-      //=========================================================================================================
+      //!=========================================================================================================
       // There are also additional JS chunk files if you use code splitting.
       //add 
 
-      //=========================================================================================================
+      //!=========================================================================================================
       //Original
       // chunkFilename: isEnvProduction
       //   ? 'static/js/[name].[contenthash:8].chunk.js'
@@ -243,7 +244,7 @@ module.exports = function (webpackEnv) {
       chunkFilename: isEnvProduction
         ? 'static/js/*[name].[contenthash:8].chunk.js*'
         : isEnvDevelopment && 'static/js/[name].chunk.js',
-      //=========================================================================================================
+      //!=========================================================================================================
       assetModuleFilename: 'static/media/[name].[hash][ext]',
       // webpack uses `publicPath` to determine where the app is being served from.
       // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -604,7 +605,7 @@ module.exports = function (webpackEnv) {
 
 
 
-    //=========================================================================================================
+    //!=========================================================================================================
 
 
     plugins: [
@@ -638,7 +639,7 @@ module.exports = function (webpackEnv) {
         )
       ),
       
-      //=========================================================================================================
+      //!=========================================================================================================
       new HtmlWebpackPlugin(
         Object.assign(
           {},
@@ -666,6 +667,58 @@ module.exports = function (webpackEnv) {
             : undefined
         )
       ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {
+            inject: true,
+            chunks: ['phone'],
+            template: paths.phoneHtml,
+            filename: 'phone.html'
+          },
+          isEnvProduction
+          ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+      //!=========================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       // Inlines the webpack runtime script. This script is too small to warrant
@@ -732,7 +785,7 @@ module.exports = function (webpackEnv) {
       //     };
       //   },
       // }),
-      //=========================================================================================================
+      //!=========================================================================================================
       // Moment.js is an extremely popular library that bundles large locale files
       // by default due to how webpack interprets its code. This is a practical
       // solution that requires the user to opt into importing specific locales.

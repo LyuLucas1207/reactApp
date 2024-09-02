@@ -23,6 +23,7 @@ function App() {
         </a>
         <button className="login-button" onClick={() => navigate('/layout')}>go to Layout</button>
         <button className="login-button" onClick={() => window.location.href = '/blog.html'}>Go to Blog</button>
+        <button className="login-button" onClick={() => window.location.href = '/phone.html'}>Go to Phone</button>
       </header>
     </div>
   );
